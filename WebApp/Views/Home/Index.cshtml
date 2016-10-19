@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html ng-app="colorApp">
+
+<head>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/script.js"></script>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .block {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 1px;
+            margin-top: -4px;
+            border: solid 1px #red;
+        }
+    </style>
+</head>
+
+<body ng-controller="ColorController as vm">
+    <div ng-repeat="block in vm.blocks" class="block" ng-style="{'background-color': block.color}">
+    </div>
+</body>
+
+</html>
